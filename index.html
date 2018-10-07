@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,12 +8,19 @@
     <title>Stock update</title>
 </head>
 
-<div id="button area"></div>
-
-
-<div id="content area"></div>
-
 <body>
-    
+    <h1>STOCK UPDATES</h1>
+
+    <div id="stockButtons"></div>
+
+    <form>
+        <input type="text" id='stock-input' />
+        <button type="submit" id="add-stock" name="Submit">Submit</button>
+        <button type="button" name="Clear Results">Clear Results</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="app.js"></script>
 </body>
+
 </html>
