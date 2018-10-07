@@ -39,9 +39,8 @@ const validate = function () {
 //     // }
 //     console.log(queryURL);
 
-// };
+};
 
 // $('#stock-input').on('keypress', validate);
 $('#add-stock').on('click', addButton);
 render();
-
