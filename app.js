@@ -20,16 +20,16 @@ const addButton = function(event) {
     render();
 };
 
-// const validate = function () {
-//     event.preventDefault();
-//     const stock = $('#stock-input').val().trim();
-//     const queryURL = `https://api.iextrading.com/1.0/ref-data/symbols#`;
-//     $.ajax({
-//         url:queryURL,
-//         method: 'GET'
-//     }).then(function(response){
-//         $('#stock-input').text(JSON.stringify(response));
-//     });
+const validate = function () {
+    event.preventDefault();
+    const stock = $('#stock-input').val().trim();
+    const queryURL = `https://api.iextrading.com/1.0/ref-data/symbols#`;
+    $.ajax({
+        url:queryURL,
+        method: 'GET'
+    }).then(function(response){
+        $('#stock-input').text(JSON.stringify(response));
+    });
 
 //     // if (response.symbol !== stock) {
 //     //     $('#add-stock').hide();
