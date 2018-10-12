@@ -10,22 +10,70 @@
     <title>Stock update</title>
 </head>
 
-<body>
-    <div class="row">
-        <div class="col-12">
+<body class="bg-dark">
+    <div class="row d-flex">
+        <div class="col-12 bg-warning text-white">
             <header>
-                <h1 class="justify-content-center">STOCK UPDATES</h1>
-                <form class="align-center">
-                    <input type="text" id='stock-input' class="border border-dark" />
-                    <button type="submit" id="add-stock" name="Submit">Submit</button>
-                    <button type="button" id="clear-out" name="Clear Results">Clear Results</button>
-                </form>
-                <div id="stockButtons"></div>
+                <h1 class="text-center">STOCK UPDATES</h1>
             </header>
         </div>
     </div>
-    <div class="infoRender bg-info"></div>
+    <br>
+    <div class="container">
+        <div class="row">
+                <div class="col-10-md col-12-sm mx-auto mb-2">
+                        <div class="card card-body bg-white">
+                            <form class="justify-content-center mx-auto">
+                                <input type="text" id='stock-input' class="border border-dark mr-3" placeholder="Enter Stock Symbol" />
+                                <button type="submit" id="add-stock" class="btn btn-warning ml-1 mr-1" name="Submit">Submit</button>
+                                <button type="button" id="clear-out" name="Clear Results" class="btn btn-warning ml-1 mr-1">Clear
+                                    Results</button>
+                            </form>
+                        </div>
+                    </div>
+            <div class="col-3-md col-12-xs">
+                <div class="card bg-light mb-3 d-flex">
+                    <div class="card-header">
+                        <h2>Stock Buttons</h2>
+                    </div>
+                    <div class="card-body d-flex">
+                        <div id="stockButtons" class="mx-auto"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row mt-2">
+            <div class="col-3-md">
+                <div class="card mb-2">
+                    <div class="card-header">
+                        <h3>Stock Information</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="infoRender"></div>
+                    </div>
+                </div>
+                <div class="col-7-md">
+                    <div class="card bg-white mx-auto">
+                        <div class="card-header">
+                            <h3>Top Stories</h3>
+                        </div>
+                        <div id="newsLine"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row">
+            <div class="col-3 col-12-sm"></div>
+            <div class="col-9 col-12-sm">
+                <div class="card bg-white">
+                    <div id="newsLine"></div>
+                </div>
+            </div>
+        </div>
+    </div> -->
 
+
+    </div>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="app.js"></script>
 </body>
