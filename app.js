@@ -54,7 +54,7 @@ const addButton = function (event) {
 const stockSearch = function () {
     $('.infoRender').empty();
     $('#newsLine').empty();
-    let stock = $(this).attr('data-name');
+    const stock = $(this).attr('data-name');
     console.log('stock');
     $.ajax({
         url: `https:api.iextrading.com/1.0/stock/${stock}/batch?types=quote,news,logo,company&range=1m&last=10`,
