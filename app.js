@@ -89,7 +89,7 @@ const stockSearch = function () {
         const priceHolder = $('<p>').text(`Stock Price: $${stockPrice}`);
         const changeHolder = $('<p>').text(`Change: ${calculatedChange}`);
         const symbolHolder = $('<p>').text(`Stock Symbol: ${stockSymbol}`);
-        const bossPlate = $('h2').text(`${boss}, CEO`);
+        const bossPlate = $('<h5>').text(`${boss}, CEO`);
         const description = $('<p>').text(`${tell}`);
         const compWeb =$(`<a href= "${compLink}" target="_blank"> <p>Company Website</p> </a>`);
         $('.infoRender').append(logoPortrait,namePlate,bossPlate,priceHolder,changeHolder,symbolHolder,description,compWeb);
