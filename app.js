@@ -56,7 +56,6 @@ const stockSearch = function () {
     $('#newsLine').empty();
     const stock = $(this).attr('data-name');
     const queryURL = `https://api.iextrading.com/1.0/stock/${stock}/batch?types=quote,news,logo,company`;
-    console.log(response);
     $.ajax({
         url: queryURL,
         method: 'GET'
