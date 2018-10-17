@@ -76,6 +76,7 @@ const stockSearch = function () {
         // console.log(stockPrice);
         // console.log(stockSymbol);
         console.log(boss);
+        console.log(compLink);
 
         // add general area to place information
         const infoBody = $('<div>');
@@ -90,7 +91,7 @@ const stockSearch = function () {
         const symbolHolder = $('<p>').text(`Stock Symbol: ${stockSymbol}`);
         const bossPlate = $('h2').text(`${boss}, CEO`);
         const description = $('<p>').text(`${tell}`);
-        const compWeb =$(`<a href= "${compLink} target="_blank"> <p>Company Website</p> </a>`);
+        const compWeb =$(`<a href= "${compLink}" target="_blank"> <p>Company Website</p> </a>`);
         $('.infoRender').append(logoPortrait,namePlate,bossPlate,priceHolder,changeHolder,symbolHolder,description,compWeb);
 
         // creating boxes for the news material
