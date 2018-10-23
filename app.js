@@ -24,7 +24,6 @@ $.ajax({
 }).then(function (response) {
     response.forEach(function (element) {
         validationList.push(element.symbol);
-        // console.log(validationList);
     });
 });
 
@@ -35,17 +34,14 @@ $.ajax({
 const addButton = function (event) {
     event.preventDefault();
     const newName = $('#stock-input').val().trim().toUpperCase();
-    console.log("I'm listening");
     if (validationList.indexOf(newName) >= 0 && !stockList.includes(newName)) {
         // alert("Please enter a valid stock symbol");
-        console.log("I'm working");
         stockList.push(newName);
         $('#stock-input').val('');
         render();
     }
     else {
         $('#add-stock').attr('disabled');
-        console.log("I'm still listening");
     }
 
 };
@@ -71,12 +67,6 @@ const stockSearch = function () {
         const stockSymbol = response.quote.symbol;
         const tell = response.company.description;
         const compLink = response.company.website;
-        // console.log(compName);
-        // console.log(compLogo);
-        // console.log(stockPrice);
-        // console.log(stockSymbol);
-        console.log(boss);
-        console.log(compLink);
 
         // add general area to place information
         const infoBody = $('<div>');
@@ -107,10 +97,6 @@ const stockSearch = function () {
             const newsSource = stockNews[i].source;
             const newsHTML = stockNews[i].url;
             const newsbit = stockNews[i].summary; 
-            console.log(newsHead);
-            console.log(newsSource);
-            console.log(newsHTML);
-            console.log(newsbit);
             newsContent.append(`<p> <a href = "${newsHTML}" target="_blank"> ${newsHead} </a> </p>`);
             newsContent.append(`<p>${newsSource}</p><p>${newsbit}</p?`);
             }
