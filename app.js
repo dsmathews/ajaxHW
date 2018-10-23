@@ -56,7 +56,6 @@ const stockSearch = function () {
         url: queryURL,
         method: 'GET'
     }).then(function (response) {
-        console.log(response);
 
         // boxes for the specific data needed from JSON file
         const compName = response.quote.companyName;
